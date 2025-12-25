@@ -11,7 +11,7 @@ export default function Header() {
     // Example for Supabase:
     // await supabase.auth.signOut()
     // Then redirect to login page:
-    router.push("/login");
+    router.push("/");
   };
 
   return (
