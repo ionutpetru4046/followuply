@@ -9,7 +9,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="w-64 bg-white shadow-md flex-shrink-0 h-screen">
+    <aside className="w-64 bg-white shadow-md shrink-0 h-screen">
       <div className="p-6">
         <h2 className="text-2xl font-bold">FollowUply</h2>
       </div>

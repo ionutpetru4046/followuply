@@ -33,7 +33,7 @@ export default function Navbar() {
           ))}
 
           <Link
-            href="/register"
+            href="/login"
             className="px-4 py-2 bg-black text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
           >
             Start Free
@@ -87,7 +87,7 @@ export default function Navbar() {
           ))}
 
           <Link
-            href="/register"
+            href="/login"
             className="block text-center px-4 py-2 bg-black text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
             onClick={() => setIsOpen(false)}
           >
