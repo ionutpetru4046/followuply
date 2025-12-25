@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-export default function SignUpPage() {
+export default function SignInPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,14 +13,14 @@ export default function SignUpPage() {
     e.preventDefault();
     // TODO: Connect to backend auth
     console.log({ email, password });
-    alert("Account created (mock)!");
-    router.push("/dashboard"); // redirect to dashboard
+    alert("Signed in (mock)!");
+    router.push("/dashboard");
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-md p-8 space-y-6">
-        <h1 className="text-2xl font-bold text-center">Sign Up</h1>
+        <h1 className="text-2xl font-bold text-center">Sign In</h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -49,14 +49,14 @@ export default function SignUpPage() {
             type="submit"
             className="w-full py-3 px-4 bg-black text-white rounded-xl font-medium hover:bg-gray-800 transition"
           >
-            Create Account
+            Sign In
           </button>
         </form>
 
         <p className="text-center text-sm text-gray-500">
-          Already have an account?{" "}
-          <Link href="/login" className="text-black font-medium hover:underline">
-            Sign In
+          Don’t have an account?{" "}
+          <Link href="/register" className="text-black font-medium hover:underline">
+            Sign Up
           </Link>
         </p>
       </div>
