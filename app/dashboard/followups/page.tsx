@@ -3,7 +3,12 @@
 import { useState } from "react";
 import DashboardShell from "../../components/ui/DashboardShell";
 import { Card } from "@/components/ui/card";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,6 +18,7 @@ interface FollowUp {
   id: number;
   date: string;
   note: string;
+  dueDate: string;
   status: "Pending" | "Completed";
 }
 
@@ -22,27 +28,61 @@ interface Client {
   followUps: FollowUp[];
 }
 
+interface NewFollowUpState {
+  clientId: number;
+  note: string;
+  dueDate: string;
+}
+
 export default function FollowUpsPage() {
   const [clients, setClients] = useState<Client[]>([
     {
       id: 1,
       name: "Alice",
       followUps: [
-        { id: 1, date: "2025-12-20", note: "Call regarding proposal", status: "Completed" },
-        { id: 2, date: "2025-12-23", note: "Follow up on email", status: "Pending" },
+        {
+          id: 1,
+          date: "2025-12-20",
+          note: "Call regarding proposal",
+          dueDate: "2025-12-21",
+          status: "Completed",
+        },
+        {
+          id: 2,
+          date: "2025-12-23",
+          note: "Follow up on email",
+          dueDate: "2025-12-27",
+          status: "Pending",
+        },
       ],
     },
     {
       id: 2,
       name: "Bob",
       followUps: [
-        { id: 1, date: "2025-12-18", note: "Send contract", status: "Completed" },
-        { id: 2, date: "2025-12-25", note: "Schedule meeting", status: "Pending" },
+        {
+          id: 1,
+          date: "2025-12-18",
+          note: "Send contract",
+          dueDate: "2025-12-23",
+          status: "Completed",
+        },
+        {
+          id: 2,
+          date: "2025-12-25",
+          note: "Schedule meeting",
+          dueDate: "2025-12-29",
+          status: "Pending",
+        },
       ],
     },
   ]);
 
-  const [newFollowUp, setNewFollowUp] = useState({ clientId: 0, note: "" });
+  const [newFollowUp, setNewFollowUp] = useState<NewFollowUpState>({
+    clientId: 0,
+    note: "",
+    dueDate: "",
+  });
 
   const deleteClient = (clientId: number) => {
     const confirmed = window.confirm(
@@ -54,15 +94,14 @@ export default function FollowUpsPage() {
     setClients((prev) => prev.filter((c) => c.id !== clientId));
   };
 
-  // Implement deleteFollowUp function
   const deleteFollowUp = (clientId: number, followUpId: number) => {
     const confirmed = window.confirm(
       "Are you sure you want to delete this follow-up?"
     );
     if (!confirmed) return;
 
-    setClients(
-      clients.map((client) =>
+    setClients((prevClients) =>
+      prevClients.map((client) =>
         client.id === clientId
           ? {
               ...client,
@@ -74,20 +113,27 @@ export default function FollowUpsPage() {
   };
 
   const addFollowUp = () => {
-    if (!newFollowUp.clientId || !newFollowUp.note) return;
+    if (
+      !newFollowUp.clientId ||
+      !newFollowUp.note.trim() ||
+      !newFollowUp.dueDate
+    )
+      return;
 
-    setClients(
-      clients.map((c) =>
+    setClients((prevClients) =>
+      prevClients.map((c) =>
         c.id === newFollowUp.clientId
           ? {
               ...c,
               followUps: [
                 ...c.followUps,
                 {
-                  id: c.followUps.length > 0
-                    ? Math.max(...c.followUps.map(f => f.id)) + 1
-                    : 1,
+                  id:
+                    c.followUps.length > 0
+                      ? Math.max(...c.followUps.map((f) => f.id)) + 1
+                      : 1,
                   date: new Date().toISOString().split("T")[0],
+                  dueDate: newFollowUp.dueDate,
                   note: newFollowUp.note,
                   status: "Pending",
                 },
@@ -97,12 +143,12 @@ export default function FollowUpsPage() {
       )
     );
 
-    setNewFollowUp({ clientId: 0, note: "" });
+    setNewFollowUp({ clientId: 0, note: "", dueDate: "" });
   };
 
   const markCompleted = (clientId: number, followUpId: number) => {
-    setClients(
-      clients.map((c) =>
+    setClients((prevClients) =>
+      prevClients.map((c) =>
         c.id === clientId
           ? {
               ...c,
@@ -126,7 +172,12 @@ export default function FollowUpsPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <select
               value={newFollowUp.clientId}
-              onChange={(e) => setNewFollowUp({ ...newFollowUp, clientId: Number(e.target.value) })}
+              onChange={(e) =>
+                setNewFollowUp({
+                  ...newFollowUp,
+                  clientId: Number(e.target.value),
+                })
+              }
               className="border rounded-lg p-2 w-full"
             >
               <option value={0}>Select Client</option>
@@ -138,10 +189,23 @@ export default function FollowUpsPage() {
             </select>
 
             <Input
+              type="date"
+              placeholder="Due date"
+              value={newFollowUp.dueDate}
+              onChange={(e) =>
+                setNewFollowUp({ ...newFollowUp, dueDate: e.target.value })
+              }
+              className="md:col-span-1"
+            />
+
+            <Input
+              type="text"
               placeholder="Follow-up note"
               value={newFollowUp.note}
-              onChange={(e) => setNewFollowUp({ ...newFollowUp, note: e.target.value })}
-              className="md:col-span-2"
+              onChange={(e) =>
+                setNewFollowUp({ ...newFollowUp, note: e.target.value })
+              }
+              className="md:col-span-1"
             />
 
             <Button onClick={addFollowUp}>Add</Button>
@@ -150,7 +214,9 @@ export default function FollowUpsPage() {
 
         {/* Clients & Follow-ups */}
         {clients.map((client) => {
-          const completed = client.followUps.filter((f) => f.status === "Completed").length;
+          const completed = client.followUps.filter(
+            (f) => f.status === "Completed"
+          ).length;
           const total = client.followUps.length;
           const progress = total > 0 ? (completed / total) * 100 : 0;
 
@@ -175,8 +241,17 @@ export default function FollowUpsPage() {
                   <AccordionItem key={f.id} value={`followup-${f.id}`}>
                     <AccordionTrigger>
                       <div className="flex justify-between items-center w-full">
-                        <span>{f.date}</span>
-                        <Badge variant={f.status === "Completed" ? "secondary" : "default"}>
+                        <span>
+                          <span className="font-medium">{f.date}</span>
+                          <span className="ml-2 text-xs text-gray-500">
+                            (Due: {f.dueDate})
+                          </span>
+                        </span>
+                        <Badge
+                          variant={
+                            f.status === "Completed" ? "secondary" : "default"
+                          }
+                        >
                           {f.status}
                         </Badge>
                       </div>
@@ -185,7 +260,11 @@ export default function FollowUpsPage() {
                       <span>{f.note}</span>
                       <div className="flex gap-2">
                         {f.status === "Pending" && (
-                          <Button size="sm" variant="outline" onClick={() => markCompleted(client.id, f.id)}>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => markCompleted(client.id, f.id)}
+                          >
                             Mark Completed
                           </Button>
                         )}
