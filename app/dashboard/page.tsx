@@ -1,5 +1,5 @@
 import DashboardShell from "../components/ui/DashboardShell";
-import { Card } from "../components/ui/card";
+import { Card } from "../../components/ui/card";
 
 export default function DashboardPage() {
   return (

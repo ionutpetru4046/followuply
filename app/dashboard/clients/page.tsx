@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import DashboardShell from "../../components/ui/DashboardShell";
-import { Card } from "../../components/ui/card";
+import { Card } from "@/components/ui/card";
 
 interface Client {
   id: number;

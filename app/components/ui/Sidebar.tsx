@@ -6,6 +6,7 @@ export default function Sidebar() {
     { name: "Clients", href: "/dashboard/clients" },
     { name: "Messages", href: "/dashboard/messages" },
     { name: "Settings", href: "/dashboard/settings" },
+    { name: "FollowUps", href: "/dashboard/followups" },
   ];
 
   return (

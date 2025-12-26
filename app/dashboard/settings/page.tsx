@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import DashboardShell from "../../components/ui/DashboardShell";
-import { Card } from "../../components/ui/card";
+import { Card } from "@/components/ui/card";
+import { Field } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function SettingsPage() {
   const [user, setUser] = useState({
@@ -22,34 +25,39 @@ export default function SettingsPage() {
 
         <Card>
           <h2 className="font-semibold mb-4">Profile</h2>
-          <div className="flex flex-col gap-4">
-            <input
-              type="text"
-              placeholder="Name"
-              value={user.name}
-              onChange={(e) => setUser({ ...user, name: e.target.value })}
-              className="border rounded-lg p-2"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              value={user.email}
-              onChange={(e) => setUser({ ...user, email: e.target.value })}
-              className="border rounded-lg p-2"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={user.password}
-              onChange={(e) => setUser({ ...user, password: e.target.value })}
-              className="border rounded-lg p-2"
-            />
-            <button
-              onClick={saveSettings}
-              className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-            >
+          <div className="space-y-4">
+            <Field>
+              <label className="block mb-1 font-medium">Name</label>
+              <Input
+                placeholder="Name"
+                value={user.name}
+                onChange={(e) => setUser({ ...user, name: e.target.value })}
+              />
+            </Field>
+
+            <Field>
+              <label className="block mb-1 font-medium">Email</label>
+              <Input
+                type="email"
+                placeholder="Email"
+                value={user.email}
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+              />
+            </Field>
+
+            <Field>
+              <label className="block mb-1 font-medium">Password</label>
+              <Input
+                type="password"
+                placeholder="Password"
+                value={user.password}
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+              />
+            </Field>
+
+            <Button onClick={saveSettings} className="w-full md:w-auto">
               Save
-            </button>
+            </Button>
           </div>
         </Card>
       </div>
