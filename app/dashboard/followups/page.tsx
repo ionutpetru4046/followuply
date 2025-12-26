@@ -44,6 +44,35 @@ export default function FollowUpsPage() {
 
   const [newFollowUp, setNewFollowUp] = useState({ clientId: 0, note: "" });
 
+  const deleteClient = (clientId: number) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this client and all their follow-ups?"
+    );
+
+    if (!confirmed) return;
+
+    setClients((prev) => prev.filter((c) => c.id !== clientId));
+  };
+
+  // Implement deleteFollowUp function
+  const deleteFollowUp = (clientId: number, followUpId: number) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this follow-up?"
+    );
+    if (!confirmed) return;
+
+    setClients(
+      clients.map((client) =>
+        client.id === clientId
+          ? {
+              ...client,
+              followUps: client.followUps.filter((f) => f.id !== followUpId),
+            }
+          : client
+      )
+    );
+  };
+
   const addFollowUp = () => {
     if (!newFollowUp.clientId || !newFollowUp.note) return;
 
@@ -55,7 +84,9 @@ export default function FollowUpsPage() {
               followUps: [
                 ...c.followUps,
                 {
-                  id: c.followUps.length + 1,
+                  id: c.followUps.length > 0
+                    ? Math.max(...c.followUps.map(f => f.id)) + 1
+                    : 1,
                   date: new Date().toISOString().split("T")[0],
                   note: newFollowUp.note,
                   status: "Pending",
@@ -127,7 +158,16 @@ export default function FollowUpsPage() {
             <Card key={client.id}>
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold">{client.name}</h3>
-                <Progress value={progress} className="w-48" />
+                <div className="flex items-center gap-2">
+                  <Progress value={progress} className="w-48" />
+                  <Button
+                    size="sm"
+                    variant="destructive"
+                    onClick={() => deleteClient(client.id)}
+                  >
+                    Delete Client
+                  </Button>
+                </div>
               </div>
 
               <Accordion type="single" collapsible className="space-y-2">
@@ -143,11 +183,20 @@ export default function FollowUpsPage() {
                     </AccordionTrigger>
                     <AccordionContent className="flex justify-between items-center">
                       <span>{f.note}</span>
-                      {f.status === "Pending" && (
-                        <Button size="sm" variant="outline" onClick={() => markCompleted(client.id, f.id)}>
-                          Mark Completed
+                      <div className="flex gap-2">
+                        {f.status === "Pending" && (
+                          <Button size="sm" variant="outline" onClick={() => markCompleted(client.id, f.id)}>
+                            Mark Completed
+                          </Button>
+                        )}
+                        <Button
+                          size="sm"
+                          variant="destructive"
+                          onClick={() => deleteFollowUp(client.id, f.id)}
+                        >
+                          Delete
                         </Button>
-                      )}
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
