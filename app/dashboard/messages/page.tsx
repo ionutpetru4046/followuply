@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import DashboardShell from "../../components/ui/DashboardShell";
 import { Card } from "@/components/ui/card";
 import { Field } from "@/components/ui/field";
@@ -25,14 +25,11 @@ export default function MessagesPage() {
   const [newMessage, setNewMessage] = useState({ client: "", content: "" });
   const [clientDropdown, setClientDropdown] = useState(false);
   const [clientSuggestions, setClientSuggestions] = useState<string[]>([]);
-  const [contentCharCount, setContentCharCount] = useState(0);
-
   const contentMaxLength = 160;
   const clientInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    setContentCharCount(newMessage.content.length);
-  }, [newMessage.content]);
+  // HANDLING CHAR COUNT WITHOUT EFFECT (to avoid React lint error about setState in effect)
+  const contentCharCount = newMessage.content.length;
 
   const sendMessage = () => {
     if (!newMessage.client.trim() || !newMessage.content.trim()) return;
@@ -48,7 +45,7 @@ export default function MessagesPage() {
 
   const handleClientInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setNewMessage({ ...newMessage, client: value });
+    setNewMessage((nm) => ({ ...nm, client: value }));
     if (value.length > 0) {
       setClientSuggestions(
         clientsList.filter(c =>
@@ -63,7 +60,7 @@ export default function MessagesPage() {
   };
 
   const handleSelectClient = (client: string) => {
-    setNewMessage({ ...newMessage, client });
+    setNewMessage((nm) => ({ ...nm, client }));
     setClientSuggestions([]);
     setClientDropdown(false);
   };
@@ -99,6 +96,7 @@ export default function MessagesPage() {
             }}
           >
             <div className="flex flex-col md:flex-row gap-6 p-6">
+              {/* Client selection (with dropdown) */}
               <div className="relative w-full md:w-1/4">
                 <Field>
                   <label className="block mb-1 font-semibold text-gray-700">Client</label>
@@ -135,21 +133,21 @@ export default function MessagesPage() {
                   )}
                 </Field>
               </div>
-
+              {/* Message textarea */}
               <div className="w-full md:w-2/4 flex flex-col">
                 <Field>
                   <label className="block mb-1 font-semibold text-gray-700">
                     Message <span className="font-normal text-xs text-muted-foreground">(max {contentMaxLength} chars)</span>
                   </label>
-                  <Input
-                    as="textarea"
+                  {/* Instead of using `as="textarea"`, use a native textarea for message input */}
+                  <textarea
                     rows={2}
                     maxLength={contentMaxLength}
                     placeholder="Write your message…"
-                    className="rounded-xl resize-none h-16 transition-all focus:ring-2 focus:ring-indigo-400"
+                    className="rounded-xl resize-none h-16 transition-all focus:ring-2 focus:ring-indigo-400 border border-gray-300 px-3 py-2"
                     value={newMessage.content}
                     onChange={e =>
-                      setNewMessage({ ...newMessage, content: e.target.value })
+                      setNewMessage((nm) => ({ ...nm, content: e.target.value }))
                     }
                   />
                 </Field>
@@ -157,7 +155,7 @@ export default function MessagesPage() {
                   {contentCharCount}/{contentMaxLength}
                 </div>
               </div>
-
+              {/* Submit button */}
               <div className="flex items-end w-full md:w-1/4">
                 <Button
                   type="submit"

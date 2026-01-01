@@ -1,4 +1,7 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -6,15 +9,15 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 
 export function LoginForm({
   className,
@@ -22,6 +25,16 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      
+      {/* Back to Home */}
+      <Link
+        href="/"
+        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back to Home
+      </Link>
+
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Welcome back</CardTitle>
@@ -29,6 +42,7 @@ export function LoginForm({
             Login with your Apple or Google account
           </CardDescription>
         </CardHeader>
+
         <CardContent>
           <form>
             <FieldGroup>
@@ -42,6 +56,7 @@ export function LoginForm({
                   </svg>
                   Login with Apple
                 </Button>
+
                 <Button variant="outline" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -52,9 +67,11 @@ export function LoginForm({
                   Login with Google
                 </Button>
               </Field>
+
               <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
                 Or continue with
               </FieldSeparator>
+
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
                 <Input
@@ -64,6 +81,7 @@ export function LoginForm({
                   required
                 />
               </Field>
+
               <Field>
                 <div className="flex items-center">
                   <FieldLabel htmlFor="password">Password</FieldLabel>
@@ -76,6 +94,7 @@ export function LoginForm({
                 </div>
                 <Input id="password" type="password" required />
               </Field>
+
               <Field>
                 <Button type="submit">Login</Button>
                 <FieldDescription className="text-center">
@@ -86,10 +105,11 @@ export function LoginForm({
           </form>
         </CardContent>
       </Card>
+
       <FieldDescription className="px-6 text-center">
         By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
         and <a href="#">Privacy Policy</a>.
       </FieldDescription>
     </div>
-  )
+  );
 }
