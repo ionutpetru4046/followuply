@@ -14,6 +14,8 @@ import {
   FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { ArrowLeft } from "lucide-react"
+import Link from "next/link"
 
 export function SignupForm({
   className,
@@ -21,6 +23,16 @@ export function SignupForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+
+      {/* Back to Home */}
+      <Link
+        href="/"
+        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back to Home
+      </Link>
+      
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Create your account</CardTitle>
