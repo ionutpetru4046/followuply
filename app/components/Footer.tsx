@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h3 className="text-white font-semibold mb-4">Contact</h3>
-          <p>Email: <a href="mailto:hello@followuply.com" className="hover:text-white">hello@followuply.com</a></p>
+          <p>Email: <a href="mailto:hello@followuply.com" className="hover:text-white">followuply@gmail.com</a></p>
           <p>Phone: <a href="tel:+353871234567" className="hover:text-white">+353 87 123 4567</a></p>
         </div>
       </div>
