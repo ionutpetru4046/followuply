@@ -5,17 +5,7 @@ import FeatureCard from "./components/FeatureCard";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
-/**
- * - Remove global overflow-x-hidden from body in useEffect, move prevention to a single wrapper.
- * - Add overflow-x-hidden to the main content wrapper (on a div that wraps <main>), not globally/body.
- * - Review negative positioning: Never use left/right/xyz: -vw units. Instead, use max-w-screen, clamp negative offsets to no larger than -32px (-8).
- * - For blobs, ensure max-w constraints do not cause content to bleed horizontally.
- */
-
 export default function HomePage() {
-  // Remove overflowX: hidden modification from body (not needed and may clash with other layouts)
-  // Instead, apply overflow-x-hidden at a wrapper level for this page.
-
   return (
     <>
       <Navbar />
@@ -33,7 +23,7 @@ export default function HomePage() {
                 🚀 Smarter client management • Modern CRM
               </span>
               <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight text-white drop-shadow-md">
-                More Repeat Clients.<br className="hidden sm:inline" />
+                More Clients.<br className="hidden sm:inline" />
                 Less Work.
               </h1>
               <p className="mt-6 text-base xs:text-lg sm:text-xl text-gray-200 font-light max-w-xl mx-auto">
@@ -242,17 +232,14 @@ export default function HomePage() {
                 <FeatureCard
                   title="Smart Reminders"
                   description="Never forget to follow up. We tell you who needs outreach today—and why."
-                  icon="🔔"
                 />
                 <FeatureCard
                   title="Easy Import"
                   description="Add or import your clients in seconds. No technical setup required."
-                  icon="⬇️"
                 />
                 <FeatureCard
                   title="Works Everywhere"
                   description="Use on any device. Mobile-friendly, nothing to install."
-                  icon="🌎"
                 />
               </div>
             </div>
