@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold hover:text-black">
+        <Link href="#hero" className="text-2xl font-bold hover:text-black">
           FollowUply
         </Link>
 
