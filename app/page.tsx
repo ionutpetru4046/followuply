@@ -181,7 +181,7 @@ export default function HomePage() {
                   <li>• Community support</li>
                 </ul>
                 <a
-                  href="/register"
+                  href="/login"
                   className="inline-block px-6 py-3 bg-black text-white rounded-xl font-medium w-full"
                 >
                   Get Started
@@ -200,7 +200,7 @@ export default function HomePage() {
                   <li>• Priority email support</li>
                 </ul>
                 <a
-                  href="/register"
+                  href="/login"
                   className="inline-block px-6 py-3 bg-black text-white rounded-xl font-medium w-full"
                 >
                   Start Free Trial
@@ -218,7 +218,7 @@ export default function HomePage() {
                   <li>• Dedicated support</li>
                 </ul>
                 <a
-                  href="/register"
+                  href="/login"
                   className="inline-block px-6 py-3 bg-black text-white rounded-xl font-medium w-full"
                 >
                   Contact Sales
