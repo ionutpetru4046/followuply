@@ -57,26 +57,74 @@ export default function HomePage() {
         </section>
 
         {/* Problem */}
-        <section className="px-6 py-20 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-semibold">
-              You lose clients — not because you’re bad, but because you’re
-              busy.
+        <section className="relative px-6 py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950">
+          {/* Accent Blobs */}
+          <div className="pointer-events-none absolute -top-24 -right-32 w-[340px] h-[340px] rounded-full bg-indigo-400 opacity-20 blur-3xl z-0"></div>
+          <div className="pointer-events-none absolute left-0 bottom-0 w-[220px] h-[220px] rounded-full bg-pink-400 opacity-20 blur-3xl z-0"></div>
+
+          <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+            <span className="inline-flex items-center gap-2 px-4 py-1 bg-white/10 text-indigo-300 rounded-full text-xs font-medium mb-6 shadow">
+              The Problem Every Small Business Faces
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow mb-4">
+              You lose clients — not because you’re bad, but because you’re <span className="bg-indigo-600 text-white px-2 py-1 rounded-md">busy</span>.
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
-              Most small businesses track clients in WhatsApp, Instagram, or
-              notes. After a few weeks, it’s impossible to remember who hasn’t
-              come back.
+            <p className="mt-4 text-lg text-gray-200 font-light leading-relaxed">
+              Most solopreneurs track clients in WhatsApp, Instagram, or notes. After a few weeks, it’s <span className="font-semibold text-indigo-300">impossible</span> to remember who hasn’t come back.
             </p>
 
-            <ul className="mt-6 space-y-2 text-gray-600">
-              <li>• Empty appointment slots</li>
-              <li>• Lost repeat revenue</li>
-              <li>• “I should message them” — but you forget</li>
-            </ul>
+            {/* Modern Problem Grid */}
+            <div className="mt-8 w-full grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+              <div className="bg-white/5 ring-1 ring-white/10 rounded-xl px-6 py-8 backdrop-blur shadow-lg hover:shadow-xl transition flex flex-col items-center">
+                <span className="w-12 h-12 flex items-center justify-center mb-3 rounded-full bg-indigo-500/30 text-indigo-200">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 14v7m0 0H5m3 0h3m6-7v7m0 0h-3m3 0h3M12 7v7m0 0h-3m3 0h3" /></svg>
+                </span>
+                <div className="font-medium text-white mb-1">Empty schedule slots</div>
+                <div className="text-gray-300 text-sm">Days with no clients returning</div>
+              </div>
+              <div className="bg-white/5 ring-1 ring-white/10 rounded-xl px-6 py-8 backdrop-blur shadow-lg hover:shadow-xl transition flex flex-col items-center">
+                <span className="w-12 h-12 flex items-center justify-center mb-3 rounded-full bg-pink-500/30 text-pink-200">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 12h.01M12 15v.01M12 8.5v.01M8.991 12c0-1.659 1.35-3 3.009-3s3.009 1.341 3.009 3-1.35 3-3.009 3-3.009-1.341-3.009-3z" /></svg>
+                </span>
+                <div className="font-medium text-white mb-1">Lost repeat revenue</div>
+                <div className="text-gray-300 text-sm">Forget to follow-up = lost income</div>
+              </div>
+              <div className="bg-white/5 ring-1 ring-white/10 rounded-xl px-6 py-8 backdrop-blur shadow-lg hover:shadow-xl transition flex flex-col items-center">
+                <span className="w-12 h-12 flex items-center justify-center mb-3 rounded-full bg-yellow-400/30 text-yellow-100">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1M12 20h.01M6 18C3.33 15.31 2 13.09 2 10.9c0-3.44 2.68-6.13 6-6.13s6 2.69 6 6.13c0 2.19-1.33 4.41-4 7.1z" /></svg>
+                </span>
+                <div className="font-medium text-white mb-1">“I should message them…”</div>
+                <div className="text-gray-300 text-sm">But things slip through the cracks</div>
+              </div>
+            </div>
 
-            <p className="mt-6 font-medium">FollowUply fixes that.</p>
+            {/* Divider */}
+            <div className="my-12 flex items-center w-full max-w-lg mx-auto">
+              <div className="flex-grow border-t border-white/20"></div>
+              <span className="mx-6 text-indigo-300 text-sm font-semibold uppercase tracking-widest">The Solution</span>
+              <div className="flex-grow border-t border-white/20"></div>
+            </div>
+
+            {/* Animated Solution Card */}
+            <div className="bg-gradient-to-br from-indigo-600 via-indigo-500 to-indigo-700 rounded-2xl shadow-2xl py-10 px-8 md:px-16 flex flex-col items-center gap-3 w-full max-w-2xl mx-auto animate-fade-in-up">
+              <h3 className="text-2xl md:text-3xl font-bold text-white flex items-center gap-2 mb-2">
+                <svg className="w-7 h-7 text-green-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                FollowUply fixes that.
+              </h3>
+              <p className="text-gray-100 text-base md:text-lg mt-2">
+                Intelligent reminders and follow-up tools make sure no one slips through the cracks again.<br />
+                <span className="block mt-2 text-indigo-100/80 text-sm">
+                  Stay on top of every client — even on your busiest days.
+                </span>
+              </p>
+              <a
+                href="/login"
+                className="mt-6 px-7 py-3 bg-white/10 hover:bg-white/20 rounded-lg text-indigo-100 font-semibold text-base shadow focus:outline-none border border-white/10 transition"
+              >
+                Try FollowUply Free
+              </a>
+            </div>
           </div>
         </section>
 
