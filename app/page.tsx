@@ -454,7 +454,7 @@ export default function HomePage() {
                   <li>✔ Dedicated support</li>
                 </ul>
                 <a
-                  href="/contact"
+                  href="#contact"
                   className="inline-block px-6 py-4 border border-yellow-500 bg-white text-yellow-700 rounded-xl font-semibold w-full text-center hover:bg-yellow-50 hover:scale-105 transition"
                 >
                   Contact Sales
@@ -469,7 +469,7 @@ export default function HomePage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="min-h-svh flex items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-6 py-0">
+        <section id="contact" className="min-h-svh flex items-center pt-24 justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-6 py-0">
           <div className="max-w-3xl w-full mx-auto text-center py-24 rounded-3xl shadow-lg bg-white/80 backdrop-blur">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-indigo-900">
               Get in Touch
