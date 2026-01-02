@@ -107,28 +107,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Pricing */}
-        <section className="px-6 py-20 bg-white">
-          <div className="max-w-md mx-auto text-center border rounded-2xl p-8">
-            <h2 className="text-3xl font-semibold">Simple pricing</h2>
-
-            <p className="mt-6 text-4xl font-semibold">€9 / month</p>
-
-            <ul className="mt-6 space-y-2 text-gray-600">
-              <li>• Unlimited clients</li>
-              <li>• Automatic follow-up tracking</li>
-              <li>• WhatsApp & email reminders</li>
-              <li>• Mobile-friendly dashboard</li>
-            </ul>
-
-            <button className="mt-8 w-full px-6 py-3 rounded-xl bg-black text-white text-sm font-medium">
-              Start free for 7 days
-            </button>
-
-            <p className="mt-3 text-sm text-gray-500">Cancel anytime</p>
-          </div>
-        </section>
-
         {/* Final CTA */}
         <section className="px-6 py-24 text-center">
           <h2 className="text-3xl font-semibold">
