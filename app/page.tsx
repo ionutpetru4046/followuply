@@ -10,7 +10,7 @@ export default function HomePage() {
     <>
       <Navbar />
       {/* Apply overflow-x-hidden at the outermost AppPage wrapper to prevent horizontal scroll */}
-      <div className="w-full overflow-x-hidden">
+      <div id="hero" className="w-full overflow-x-hidden">
         <main className="bg-gray-50 text-gray-900">
           {/* Hero */}
           <section className="relative flex items-center justify-center w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 px-4 sm:px-8" style={{ minHeight: "100vh" }}>
@@ -31,6 +31,12 @@ export default function HomePage() {
                 <span className="inline-block mt-4 border-l-4 border-indigo-400 pl-4 text-xs md:text-base text-indigo-200">
                   Designed for solopreneurs, small business owners, and anyone who cares about their clients.
                 </span>
+                <br />
+                <span className="mt-4 block text-xs md:text-base text-indigo-100">
+                  With our streamlined dashboard and smart automations, tracking conversations and capturing every opportunity has never been easier.
+                  Stay focused on relationships, not on juggling apps or sticky notes. <br />
+                  Trusted by professionals in beauty, coaching, consulting, personal fitness, retail, and beyond.
+                </span>
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                 <a
@@ -50,7 +56,7 @@ export default function HomePage() {
                 <svg className="w-4 h-4 text-green-400 inline-block" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                No credit card required • Cancel anytime
+                No credit card required • Cancel anytime • Trusted worldwide
               </p>
               {/* Extra modern UI element: Trust bar or customer logos (demo) */}
               <div className="mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 opacity-80">
@@ -58,6 +64,8 @@ export default function HomePage() {
                 <img src="/customers/customer1.svg" alt="Customer 1" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
                 <img src="/customers/customer2.svg" alt="Customer 2" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
                 <img src="/customers/customer3.svg" alt="Customer 3" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
+                <img src="/customers/customer4.svg" alt="Customer 4" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
+                <img src="/customers/customer5.svg" alt="Customer 5" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
                 <span className="text-xs text-gray-300/70 hidden sm:inline">and more...</span>
               </div>
               {/* New: Quick video demo or animation */}
@@ -74,7 +82,10 @@ export default function HomePage() {
                   <source src="/followuply-demo.mp4" type="video/mp4" />
                   Demo video unavailable
                 </video>
-                <span className="text-indigo-100 text-xs mt-3">See how it works in 30 seconds</span>
+                <span className="text-indigo-100 text-xs mt-3">See how it works in 30 seconds. 
+                  <br />
+                  <span className="text-gray-300">Our platform helps you close more business and build lasting relationships, with minimal effort.</span>
+                </span>
               </div>
             </div>
           </section>
@@ -90,24 +101,36 @@ export default function HomePage() {
               </h2>
               <p className="mt-5 text-base sm:text-lg text-gray-200 mb-6">
                 Inconsistent follow-ups cost you repeat business. Spreadsheets and sticky notes just can&apos;t keep up.
+                <br />
+                As your business grows, so does the challenge. Clients expect personal attention, but juggling appointments and remembering names becomes impossible without help.
+                <br />
+                Even the most dedicated pros can lose track and let high-value clients slip through the cracks.
               </p>
               {/* Modern Problem Grid */}
               <div className="mt-8 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
                 <div className="bg-gray-800 rounded-xl p-6 shadow text-gray-50">
                   <span role="img" aria-label="lost">😵‍💫</span>
                   <div className="font-semibold mt-3">Clients Go Cold</div>
-                  <div className="text-xs mt-1">Forget to check in on time? Opportunities vanish.</div>
+                  <div className="text-xs mt-1">Forget to check in on time? Opportunities vanish. <br />Big deals are lost when you don&apos;t follow up at just the right moment.</div>
                 </div>
                 <div className="bg-gray-800 rounded-xl p-6 shadow text-gray-50">
                   <span role="img" aria-label="messy">📋</span>
                   <div className="font-semibold mt-3">Messy Trackers</div>
-                  <div className="text-xs mt-1">Sticky notes and spreadsheets let things slip through the cracks.</div>
+                  <div className="text-xs mt-1">Sticky notes and spreadsheets let things slip through the cracks.<br />Important conversations wander across chat apps, notebooks, and sticky tabs.</div>
                 </div>
                 <div className="bg-gray-800 rounded-xl p-6 shadow text-gray-50">
                   <span role="img" aria-label="no time">⏰</span>
                   <div className="font-semibold mt-3">No Time</div>
-                  <div className="text-xs mt-1">Your day’s busy enough! CRM should help, not get in the way.</div>
+                  <div className="text-xs mt-1">Your day’s busy enough! CRM should help, not get in the way.<br />Manual systems steal valuable work hours and create stress instead of peace of mind.</div>
                 </div>
+              </div>
+              <div className="mt-10 w-full max-w-xl text-left text-gray-300 text-xs sm:text-sm mx-auto">
+                <ul className="list-disc pl-4">
+                  <li>Missed upsell chances and lost referrals</li>
+                  <li>Stress and anxiety about client churn</li>
+                  <li>Admin work stealing your focus from growth & relationships</li>
+                </ul>
+                <div className="mt-4 italic">If this sounds like you — you&apos;re not alone. But there&apos;s a better way.</div>
               </div>
             </div>
           </section>
@@ -124,22 +147,35 @@ export default function HomePage() {
                 How FollowUply Works
               </h2>
               <p className="mt-5 text-base sm:text-lg text-indigo-100 mb-8">
-                Stay on top of every client and never miss a repeat opportunity.
+                Stay on top of every client and never miss a repeat opportunity.<br />
+                Our process is built for simplicity and efficiency. Designed for real people—no technical jargon, just results.
               </p>
               {/* Steps grid */}
               <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10 w-full">
                 <div className="bg-indigo-900/80 rounded-xl p-6 text-white shadow">
                   <div className="font-bold text-lg mb-2">1. Add Clients</div>
-                  <div className="text-xs">Name, contact info, simple setup. No mess.</div>
+                  <div className="text-xs">
+                    Name, contact info, simple setup. No mess.<br />
+                    Bulk-import from your contacts or spreadsheets, and organize by tags, priority, and notes in seconds.
+                  </div>
                 </div>
                 <div className="bg-indigo-900/80 rounded-xl p-6 text-white shadow">
                   <div className="font-bold text-lg mb-2">2. Get Reminders</div>
-                  <div className="text-xs">Automatic, smart reminders for who needs a reach-out today.</div>
+                  <div className="text-xs">
+                    Automatic, smart reminders for who needs a reach-out today.<br />
+                    Set custom schedules or let the system auto-prioritize your queue based on engagement and history. Notifications come via email, app, or SMS!
+                  </div>
                 </div>
                 <div className="bg-indigo-900/80 rounded-xl p-6 text-white shadow">
                   <div className="font-bold text-lg mb-2">3. Grow Business</div>
-                  <div className="text-xs">Consistent clients, more referrals, no anxiety.</div>
+                  <div className="text-xs">
+                    Consistent clients, more referrals, no anxiety.<br />
+                    Review follow-up history at a glance, track client satisfaction, and watch your referrals grow — while spending less time on admin.
+                  </div>
                 </div>
+              </div>
+              <div className="mt-10 text-indigo-100 text-base max-w-2xl mx-auto text-center hidden sm:block">
+                <strong>Bonus:</strong> Integrate with your calendar, sync reminders to your phone, and get subtle nudges so no one ever slips through the cracks.
               </div>
             </div>
           </section>
@@ -153,19 +189,27 @@ export default function HomePage() {
               <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-7 text-left">
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
                   <span className="font-semibold text-indigo-700">Never lose clients</span>
-                  <p className="text-gray-600 text-sm mt-1">Stay top-of-mind automatically — for better retention and more repeat income.</p>
+                  <p className="text-gray-600 text-sm mt-1">Stay top-of-mind automatically — for better retention and more repeat income. <br />Win more referrals and renewals by providing truly personal customer care, every time, even with a busy schedule.</p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
                   <span className="font-semibold text-indigo-700">Easy, zero-learning curve</span>
-                  <p className="text-gray-600 text-sm mt-1">Built for busy solo operators: no complicated forms or setup.</p>
+                  <p className="text-gray-600 text-sm mt-1">Built for busy solo operators: no complicated forms or setup.<br />Intuitive drag-and-drop interface, straight to the point, with helpful tips along the way.</p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
                   <span className="font-semibold text-indigo-700">Secure &amp; private</span>
-                  <p className="text-gray-600 text-sm mt-1">Your data is encrypted, and only you can see it.</p>
+                  <p className="text-gray-600 text-sm mt-1">Your data is encrypted, and only you can see it.<br />SOC2-ready, GDPR-compliant, and privacy-first. Backups and secure cloud hosting give you peace of mind.</p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
                   <span className="font-semibold text-indigo-700">Cancel anytime</span>
-                  <p className="text-gray-600 text-sm mt-1">No contracts, no hassle. Change plans whenever you want.</p>
+                  <p className="text-gray-600 text-sm mt-1">No contracts, no hassle. Change plans whenever you want.<br />Try risk-free. Upgrade, downgrade, pause, or export your data at any time.</p>
+                </li>
+                <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50 hidden sm:block">
+                  <span className="font-semibold text-indigo-700">Actionable Analytics</span>
+                  <p className="text-gray-600 text-sm mt-1">See your engagement rates, overdue clients, and most valuable contacts at a glance with simple charts and stats.</p>
+                </li>
+                <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50 hidden sm:block">
+                  <span className="font-semibold text-indigo-700">Support that Cares</span>
+                  <p className="text-gray-600 text-sm mt-1">Our support team is run by real people—solopreneurs and small business owners just like you.</p>
                 </li>
               </ul>
               <div className="mt-10 w-full">
@@ -180,17 +224,28 @@ export default function HomePage() {
               <div className="flex-1 bg-white rounded-2xl shadow p-8 text-center">
                 <div className="text-2xl mb-4">👩‍🎨</div>
                 <div className="font-bold text-lg mb-2">Freelancers &amp; Creatives</div>
-                <div className="text-gray-700 text-sm">Keep your project clients coming back, even months after the last gig.</div>
+                <div className="text-gray-700 text-sm">Keep your project clients coming back, even months after the last gig.
+                  <br/>Artists, designers, consultants—track every outreach, build relationships, and see more repeat commissions.
+                </div>
               </div>
               <div className="flex-1 bg-white rounded-2xl shadow p-8 text-center">
                 <div className="text-2xl mb-4">🧑‍🔬</div>
                 <div className="font-bold text-lg mb-2">Health &amp; Wellness pros</div>
-                <div className="text-gray-700 text-sm">Trainers, therapists, coaches, and more: build loyalty with automated reminders.</div>
+                <div className="text-gray-700 text-sm">Trainers, therapists, coaches, and more: build loyalty with automated reminders.
+                  <br/>Book more sessions, follow up after appointments, and show every client you care personally.</div>
               </div>
               <div className="flex-1 bg-white rounded-2xl shadow p-8 text-center">
                 <div className="text-2xl mb-4">🏪</div>
                 <div className="font-bold text-lg mb-2">Small Shop Owners</div>
-                <div className="text-gray-700 text-sm">Turn one-time visitors into loyal regulars with easy, timely check-ins.</div>
+                <div className="text-gray-700 text-sm">Turn one-time visitors into loyal regulars with easy, timely check-ins.
+                  <br/>Coffee shops, boutiques, local services—FollowUply helps you reach out before clients forget you.</div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full flex justify-center">
+              <div className="text-center text-gray-500 text-xs py-3">
+                <span className="inline-block bg-indigo-100 px-4 py-2 rounded-full m-2">
+                  Also perfect for realtors, tutors, field agents, pet care professionals, coaches, consultants, stylists, and more!
+                </span>
               </div>
             </div>
           </section>
@@ -202,7 +257,8 @@ export default function HomePage() {
                 Start Growing Your Repeat Business Now
               </h2>
               <p className="mt-5 text-lg text-gray-200">
-                Try FollowUply free for 7 days with no credit card required.
+                Try FollowUply free for 7 days with no credit card required.<br />
+                Experience the difference for yourself. Join hundreds who&apos;ve made client outreach a breeze.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                 <a
@@ -218,6 +274,11 @@ export default function HomePage() {
                   See Features
                 </a>
               </div>
+              <div className="mt-10 text-gray-300 text-xs max-w-lg mx-auto">
+                Cancel any time, keep your data, and get real help if you need it.
+                <br />
+                <span className="text-indigo-200">Fast track your growth — FollowUply is your unfair advantage!</span>
+              </div>
             </div>
             <div className="pointer-events-none absolute bottom-0 left-0 w-full h-20 sm:h-40 bg-gradient-to-t from-black to-transparent z-0" />
           </section>
@@ -231,15 +292,29 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <FeatureCard
                   title="Smart Reminders"
-                  description="Never forget to follow up. We tell you who needs outreach today—and why."
+                  description="Never forget to follow up. We tell you who needs outreach today—and why. Customizable schedules, history tracking, and gentle nudges make staying connected easy."
                 />
                 <FeatureCard
                   title="Easy Import"
-                  description="Add or import your clients in seconds. No technical setup required."
+                  description="Add or import your clients in seconds. No technical setup required. Bulk upload, deduplicate, and instant syncing from Google Contacts or CSV."
                 />
                 <FeatureCard
                   title="Works Everywhere"
-                  description="Use on any device. Mobile-friendly, nothing to install."
+                  description="Use on any device. Mobile-friendly, nothing to install. Cloud-based dashboard, iOS/Android web app, works great on tablets and desktops."
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <FeatureCard
+                  title="Notes & Tags"
+                  description="Organize clients with color-coded tags and quick notes. Search or filter in an instant."
+                />
+                <FeatureCard
+                  title="Automated Reports"
+                  description="Get weekly summaries about completed and upcoming follow-ups. See everything at a glance."
+                />
+                <FeatureCard
+                  title="Secure Cloud"
+                  description="Your data is encrypted, backed up, and never sold. Privacy built in."
                 />
               </div>
             </div>
@@ -255,26 +330,54 @@ export default function HomePage() {
                 <div className="bg-gray-50 p-8 rounded-xl border shadow text-center">
                   <div className="text-lg font-bold text-indigo-600 mb-2">Starter</div>
                   <div className="text-4xl font-extrabold mb-2">Free</div>
-                  <div className="text-gray-600 mb-6">Up to 15 clients<br />Basic CRM features<br />No card required</div>
+                  <div className="text-gray-600 mb-6">
+                    Up to 15 clients<br />
+                    Basic CRM features<br />
+                    No card required<br />
+                    Email support<br />
+                    Unlimited notes & tags<br />
+                  </div>
                   <a href="/login" className="block w-full px-6 py-2 rounded bg-indigo-600 text-white font-semibold mt-2 hover:bg-indigo-700 transition">
                     Start Free
                   </a>
+                  <div className="mt-3 text-xs text-gray-400">Great for testing the core features and getting started risk-free.</div>
                 </div>
                 <div className="bg-indigo-50 p-8 rounded-xl border-2 border-indigo-600 shadow-xl text-center">
                   <div className="text-lg font-bold text-indigo-700 mb-2">Pro</div>
                   <div className="text-4xl font-extrabold mb-2">$9<span className="text-2xl font-medium">/mo</span></div>
-                  <div className="text-gray-700 mb-6">Unlimited clients<br />All CRM features<br />Priority support</div>
+                  <div className="text-gray-700 mb-6">
+                    Unlimited clients<br />
+                    All CRM features<br />
+                    Priority support<br />
+                    Advanced reminders & automations<br />
+                    Analytics & reports<br />
+                    Dedicated onboarding call<br />
+                  </div>
                   <a href="/login" className="block w-full px-6 py-2 rounded bg-indigo-700 text-white font-semibold mt-2 hover:bg-indigo-800 transition">
                     Start 7-day Free Trial
                   </a>
+                  <div className="mt-3 text-xs text-indigo-600">Best value: For pros ready to scale relationships and retention.</div>
                 </div>
                 <div className="bg-gray-50 p-8 rounded-xl border shadow text-center">
                   <div className="text-lg font-bold text-indigo-600 mb-2">Team</div>
                   <div className="text-4xl font-extrabold mb-2">$19<span className="text-2xl font-medium">/mo</span></div>
-                  <div className="text-gray-600 mb-6">Share clients with team<br />All Pro features<br />Team reminders</div>
+                  <div className="text-gray-600 mb-6">
+                    Share clients with team<br />
+                    All Pro features<br />
+                    Team reminders<br />
+                    User roles & permissions<br />
+                    Dedicated account manager<br />
+                  </div>
                   <a href="/login" className="block w-full px-6 py-2 rounded bg-indigo-600 text-white font-semibold mt-2 hover:bg-indigo-700 transition">
                     Contact Sales
                   </a>
+                  <div className="mt-3 text-xs text-gray-400">Perfect for agencies & small teams. <br />Custom onboarding available.</div>
+                </div>
+              </div>
+              <div className="mt-8 text-sm text-gray-500">
+                <div>No hidden fees. All plans include secure cloud backup and unlimited device access.</div>
+                <div className="mt-2">
+                  <a href="#faq" className="text-indigo-700 underline">See pricing FAQ below</a>
                 </div>
               </div>
             </div>
@@ -286,9 +389,15 @@ export default function HomePage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 Contact Us
               </h2>
+              <p className="mb-6 text-gray-700">
+                Got a question, request, or suggestion? Our team always loves hearing from you.<br />
+                We reply within 24 hours during business days.<br />
+                Interested in a partnership, demo, or joining our beta program? Let us know!
+              </p>
               <form className="grid gap-5 max-w-lg mx-auto">
                 <input type="text" placeholder="Your Name" className="rounded px-4 py-2 border border-indigo-200 bg-white" required />
                 <input type="email" placeholder="Email" className="rounded px-4 py-2 border border-indigo-200 bg-white" required />
+                <input type="text" placeholder="Phone (optional)" className="rounded px-4 py-2 border border-indigo-200 bg-white" />
                 <textarea placeholder="Your Message" className="rounded px-4 py-2 border border-indigo-200 bg-white" rows={4} required />
                 <button type="submit" className="rounded px-6 py-2 bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
                   Send
@@ -296,6 +405,11 @@ export default function HomePage() {
               </form>
               <div className="mt-6">
                 <FAQSection />
+              </div>
+              <div className="mt-8 text-gray-600 text-xs">
+                Or email us directly: <a href="mailto:hello@followuply.com" className="text-indigo-700 underline">hello@followuply.com</a>
+                <br />
+                Follow us on <a href="https://twitter.com/followuply" className="text-indigo-700 underline">Twitter</a> &bull; <a href="https://facebook.com/followuply" className="text-indigo-700 underline">Facebook</a>
               </div>
             </div>
           </section>
@@ -324,6 +438,16 @@ function TestimonialCarousel() {
       quote: "The reminders are game-changing. My bookings are more consistent, and my clients feel valued.",
       user: "Lisa, Mobile Groomer",
       img: "/customers/lisa.jpg"
+    },
+    {
+      quote: "Keeping track of returning customers used to be a headache. FollowUply makes everything effortless and my business has grown.",
+      user: "James, Barbershop Owner",
+      img: "/customers/james.jpg"
+    },
+    {
+      quote: "I love the analytics—now I can see exactly who’s due for a follow-up and never get blindsided.",
+      user: "Priya, Yoga Instructor",
+      img: "/customers/priya.jpg"
     },
   ];
   const [idx, setIdx] = React.useState(0);
@@ -362,24 +486,32 @@ function FAQSection() {
   const items = [
     {
       q: "What happens after my free trial?",
-      a: "You can choose a plan or continue on the free Starter plan—no card required until you’re ready to upgrade."
+      a: "You can choose a plan or continue on the free Starter plan—no card required until you’re ready to upgrade. All your contacts and settings stay intact, no matter what you pick."
     },
     {
       q: "Can I cancel anytime?",
-      a: "Yes! There are no contracts. Cancel or change your plan whenever you like from your dashboard."
+      a: "Yes! There are no contracts. Cancel or change your plan whenever you like from your dashboard. You also have the option to pause your account, or export your data with one click."
     },
     {
       q: "Is my data secure?",
-      a: "Absolutely. Your data is encrypted and never shared. We’re GDPR-ready from day one."
+      a: "Absolutely. Your data is encrypted and never shared. We’re GDPR-ready from day one. Our systems run on certified, secure cloud infrastructure, and regular backups are included in every plan."
     },
     {
       q: "Do you have a mobile app?",
-      a: "FollowUply is fully mobile-responsive. Native apps are coming soon!"
+      a: "FollowUply is fully mobile-responsive. Native apps are coming soon! In the meantime, you can add a shortcut to your phone's home screen, and get notifications via email, SMS, or browser."
+    },
+    {
+      q: "Can I import my current client list?",
+      a: "Yes, you can import clients from spreadsheets, CSV files, or even sync with Google Contacts. We make sure there are no duplicates and your data flows in smoothly."
+    },
+    {
+      q: "Do you offer support if I get stuck?",
+      a: "Of course! Our friendly support team is one click away. Chat, email, or book a call. Pro and Team plans get priority responses."
     },
   ];
   const [openIdx, setOpenIdx] = React.useState<number | null>(null);
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto" id="faq">
       <h3 className="text-xl font-bold text-gray-900 mb-5 text-left">Frequently Asked Questions</h3>
       <ul className="divide-y divide-gray-200">
         {items.map((item, i) => (
@@ -397,6 +529,9 @@ function FAQSection() {
           </li>
         ))}
       </ul>
+      <div className="mt-6 text-gray-500 text-xs">
+        Can&apos;t find your question? <a href="mailto:hello@followuply.com" className="text-indigo-600 underline">Email us</a> any time.
+      </div>
     </div>
   );
 }
