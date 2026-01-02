@@ -8,23 +8,52 @@ export default function HomePage() {
       <Navbar />
       <main className="min-h-screen bg-gray-50 text-gray-900">
         {/* Hero */}
-        <section className="px-6 pt-24 pb-20 max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">
-            Bring clients back without remembering anything.
-          </h1>
-
-          <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            FollowUply tells you exactly which clients to message today so you
-            never lose repeat business again.
-          </p>
-
-          <div className="mt-10 flex justify-center gap-4">
-            <button className="px-6 py-3 rounded-xl bg-black text-white text-sm font-medium">
-              Start free for 7 days
-            </button>
+        <section className="relative flex items-center justify-center min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 px-4 sm:px-8">
+          {/* Background Accent Blobs */}
+          <div className="pointer-events-none absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-indigo-400 opacity-20 blur-3xl z-0"></div>
+          <div className="pointer-events-none absolute bottom-0 right-0 w-[340px] h-[340px] rounded-full bg-pink-400 opacity-20 blur-3xl z-0"></div>
+          
+          <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
+            <span className="inline-flex items-center gap-2 px-4 py-1 bg-white/10 text-indigo-300 rounded-full text-xs font-medium mb-6 shadow">
+              🚀 Smarter client management • Modern CRM
+            </span>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight text-white drop-shadow-md">
+              More Repeat Clients.<br className="hidden sm:inline" />
+              Less Work.
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-gray-200 font-light max-w-xl mx-auto">
+              FollowUply remembers every client for you — and tells you exactly who needs a follow-up today, so you never lose repeat business again.<br/>
+              <span className="inline-block mt-4 border-l-4 border-indigo-400 pl-4 text-base text-indigo-200">Designed for solopreneurs, small business owners, and anyone who cares about their clients.</span>
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+              <a
+                href="/login"
+                className="px-8 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 transition text-white text-lg font-semibold shadow-lg flex items-center justify-center ring-1 ring-indigo-700/30 focus:outline-none focus:ring-2 focus:ring-white/40"
+              >
+                Start free for 7 days
+              </a>
+              <a
+                href="#features"
+                className="px-8 py-3 rounded-lg bg-white/10 text-indigo-100 hover:bg-white/20 transition text-lg font-medium shadow flex items-center justify-center border border-white/10"
+              >
+                See Features
+              </a>
+            </div>
+            <p className="mt-5 text-sm text-gray-300 flex items-center justify-center gap-2">
+              <svg className="w-4 h-4 text-green-400 inline-block" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              No credit card required • Cancel anytime
+            </p>
+            {/* Extra modern UI element: Trust bar or customer logos (demo) */}
+            <div className="mt-8 flex flex-wrap justify-center gap-4 opacity-80">
+              <span className="text-xs text-gray-300/70">Trusted by</span>
+              <img src="/customers/customer1.svg" alt="Customer 1" className="w-20 h-6 grayscale opacity-60" />
+              <img src="/customers/customer2.svg" alt="Customer 2" className="w-20 h-6 grayscale opacity-60" />
+              <img src="/customers/customer3.svg" alt="Customer 3" className="w-20 h-6 grayscale opacity-60" />
+              <span className="text-xs text-gray-300/70 hidden sm:inline">and more...</span>
+            </div>
           </div>
-
-          <p className="mt-3 text-sm text-gray-500">No credit card required</p>
         </section>
 
         {/* Problem */}
