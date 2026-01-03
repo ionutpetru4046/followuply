@@ -25,7 +25,6 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      
       {/* Back to Home */}
       <Link
         href="/"

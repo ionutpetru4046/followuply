@@ -14,11 +14,15 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
         {/* Logo and description */}
         <div>
-          <Link href="/" className="text-2xl font-bold text-white hover:text-gray-200">
+          <Link
+            href="/"
+            className="text-2xl font-bold text-white hover:text-gray-200"
+          >
             FollowUply
           </Link>
           <p className="mt-4 text-gray-400">
-            The easiest way to keep your clients coming back. Automate follow-ups with WhatsApp and email.
+            The easiest way to keep your clients coming back. Automate
+            follow-ups with WhatsApp and email.
           </p>
         </div>
 
@@ -42,8 +46,18 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h3 className="text-white font-semibold mb-4">Contact</h3>
-          <p>Email: <a href="mailto:hello@followuply.com" className="hover:text-white">followuply@gmail.com</a></p>
-          <p>Phone: <a href="tel:+353871234567" className="hover:text-white">+353 87 123 4567</a></p>
+          <p>
+            Email:{" "}
+            <a href="mailto:hello@followuply.com" className="hover:text-white">
+              followuply@gmail.com
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a href="tel:+353871234567" className="hover:text-white">
+              +353 87 123 4567
+            </a>
+          </p>
         </div>
       </div>
 

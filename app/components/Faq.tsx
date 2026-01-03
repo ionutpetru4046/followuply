@@ -66,7 +66,9 @@ export default function Faq() {
                 aria-expanded={openIdx === i}
                 aria-controls={`faq-answer-${i}`}
               >
-                <span className="text-sm sm:text-base md:text-lg">{item.q}</span>
+                <span className="text-sm sm:text-base md:text-lg">
+                  {item.q}
+                </span>
                 <span
                   className={`ml-2 transition-transform duration-200 text-indigo-500 text-lg ${
                     openIdx === i ? "rotate-90" : ""
