@@ -18,13 +18,29 @@ export default function ClientsTable({ clients }: Props) {
           <table className="w-full border-collapse">
             <thead className="bg-gray-50">
                 <tr>
-                   <th className=""></th> 
-                   <th className=""></th> 
-                   <th className=""></th> 
-                   <th className=""></th> 
+                   <th className="px-4 py-3 text-left text-sm font-medium"></th> 
+                   <th className="px-4 py-3 text-left text-sm font-medium"></th> 
+                   <th className="px-4 py-3 text-left text-sm font-medium"></th> 
+                   <th className="px-4 py-3 text-left text-sm font-medium">
+                       Next Follow-up 
+                    </th> 
                 </tr>
             </thead>
+            <tbody>
+                {clients.map((client) => (
+                    <tr key={client.id} className="border-t">
+                       <td className="px-4 py-3">{client.name}</td> 
+                       <td className="px-4 py-3 text-gray-600">{client.email}</td> 
+                       <td className="px-4 py-3 capitalize">{client.status}</td> 
+                       <td className="px-4 py-3">
+                           {client.nextFollowUp
+                            ? new Date(client.nextFollowUp).toLocaleDateString()
+                            : '_'} 
+                        </td> 
+                    </tr>
+                ))}
+            </tbody>
           </table>
        </div> 
-    )
+    );
 }

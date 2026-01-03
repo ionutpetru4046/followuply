@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import DashboardShell from "../components/ui/DashboardShell";
+import ClientsTable from "./components/ClientsTable";
 import { Card } from "../../components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Client } from "@/lib/types";
 
 const fakeRecentActivity = [
   {
@@ -36,6 +38,15 @@ const fakeQuickStats = [
 
 export default function DashboardPage() {
   const [showRevenue, setShowRevenue] = useState(false);
+  const [clients, setClients] = useState<Client[]>([
+    {
+      id: '1',
+      name: 'John Doe',
+      email: 'john@example.com',
+      status: 'new',
+      nextFollowUp: '2026-01-05',
+    },
+  ]);
 
   return (
     <DashboardShell>
@@ -169,6 +180,12 @@ export default function DashboardPage() {
               </div>
             </div>
           </Card>
+        </div>
+
+        {/* Integrate the Clients Table below the stats cards */}
+        <div className="mb-12">
+          <h2 className="text-xl font-semibold text-blue-900 mb-5">Clients Table</h2>
+          <ClientsTable clients={clients} />
         </div>
 
         {/* Quick Highlights */}
