@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Client } from "@/lib/types";
+import AddClientModal from "./components/AddClientModal";
 
 const fakeRecentActivity = [
   {
@@ -38,6 +39,7 @@ const fakeQuickStats = [
 
 export default function DashboardPage() {
   const [showRevenue, setShowRevenue] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [clients, setClients] = useState<Client[]>([
     {
       id: '1',
@@ -47,6 +49,10 @@ export default function DashboardPage() {
       nextFollowUp: '2026-01-05',
     },
   ]);
+
+  function handleAddClient(client: Client) {
+    setClients((prev) => [client, ...prev]);
+  }
 
   return (
     <DashboardShell>
@@ -186,6 +192,22 @@ export default function DashboardPage() {
         <div className="mb-12">
           <h2 className="text-xl font-semibold text-blue-900 mb-5">Clients Table</h2>
           <ClientsTable clients={clients} />
+
+          <button
+            onClick={() => setShowModal(true)}
+            className="rounded bg-Black px-4 py-2 text-white"
+          >
+            Add Client
+          </button>
+
+          <ClientsTable clients={clients} />
+
+          {showModal && (
+            <AddClientModal 
+              onAdd={handleAddClient}
+              onClose={() => setShowModal(false)}
+            />
+          )}
         </div>
 
         {/* Quick Highlights */}
