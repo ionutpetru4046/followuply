@@ -384,7 +384,7 @@ export default function HomePage() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="flex items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
+          <section id="contact" className="flex pt-24 items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
             <div className="max-w-3xl w-full mx-auto text-center py-12 sm:py-24 rounded-3xl shadow-lg bg-white/80 backdrop-blur">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 Contact Us
@@ -511,7 +511,7 @@ function FAQSection() {
   ];
   const [openIdx, setOpenIdx] = React.useState<number | null>(null);
   return (
-    <div className="max-w-2xl mx-auto" id="faq">
+    <div className="max-w-2xl pt-24 mx-auto" id="faq">
       <h3 className="text-xl font-bold text-gray-900 mb-5 text-left">Frequently Asked Questions</h3>
       <ul className="divide-y divide-gray-200">
         {items.map((item, i) => (
