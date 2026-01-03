@@ -414,10 +414,10 @@ export default function HomePage() {
               </div>
              </div>
             </section>
-           <Faq />
-          <Footer />
-        </main>
-      </div>
+           </main>
+          </div>
+         <Faq />
+        <Footer />
     </>
   );
 }

@@ -1,4 +1,3 @@
-// FAQ Section Component
 import React from "react";
 
 export default function Faq() {
