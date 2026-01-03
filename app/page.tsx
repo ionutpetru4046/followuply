@@ -386,7 +386,7 @@ export default function HomePage() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="flex pt-24 items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
+          <section id="contact" className="flex pt-24 pb-24 items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
             <div className="max-w-3xl w-full mx-auto text-center py-12 sm:py-24 rounded-3xl shadow-lg bg-white/80 backdrop-blur">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 Contact Us
@@ -406,16 +406,15 @@ export default function HomePage() {
                 </button>
               </form>
               <div className="mt-6">
-                <Faq />
               </div>
               <div className="mt-8 text-gray-600 text-xs">
                 Or email us directly: <a href="mailto:hello@followuply.com" className="text-indigo-700 underline">hello@followuply.com</a>
                 <br />
                 Follow us on <a href="https://twitter.com/followuply" className="text-indigo-700 underline">Twitter</a> &bull; <a href="https://facebook.com/followuply" className="text-indigo-700 underline">Facebook</a>
               </div>
-            </div>
-          </section>
-
+             </div>
+            </section>
+           <Faq />
           <Footer />
         </main>
       </div>
