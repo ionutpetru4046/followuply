@@ -1,7 +1,13 @@
+export type ClientStatus = 
+    | 'new'
+    | 'contacted'
+    | 'followed-up'
+    | 'closed';
+
 export type Client = {
    id: string;
    name: string;
    email: string;
-   status: 'new' | 'contacted' | 'followed-up' | 'closed';
+   status: ClientStatus;
    nextFollowUp?: string; 
 };
