@@ -30,6 +30,7 @@ export default function Faq() {
     ];
     const [openIdx, setOpenIdx] = React.useState<number | null>(null);
     return (
+      <section id="faq" className="flex pt-24 pb-24 items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
       <div className="max-w-2xl pt-24 mx-auto" id="faq">
         <h3 className="text-xl font-bold text-gray-900 mb-5 text-left">Frequently Asked Questions</h3>
         <ul className="divide-y divide-gray-200">
@@ -52,5 +53,6 @@ export default function Faq() {
           Can&apos;t find your question? <a href="mailto:hello@followuply.com" className="text-indigo-600 underline">Email us</a> any time.
         </div>
       </div>
+      </section>
     );
   }
