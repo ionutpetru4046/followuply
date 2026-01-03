@@ -54,8 +54,35 @@ export default function AddClientModal({ onAdd, onClose }: Props) {
                 value={status}
                 onChange={(e) => setStatus(e.target.value as ClientStatus)}
             >
+                <option value="new"></option>
+                <option value="contacted">Contacted</option>
+                <option value="followed-up">Followed-up</option>
+                <option value="closed">Closed</option>
            </select>
+
+           <input 
+              type="date"
+              className="w-full rounded border p-2"
+              value={nextFollowUp}
+              onChange={(e) => setNextFollowUp(e.target.value)} 
+           />
+
+           <div className="flex justify-end gap-2">
+            <button 
+                type="button"
+                onClick={onClose}
+                className="rounded border px-4 py-2"
+            >
+               Cancel 
+            </button>
+            <button 
+                type="submit"
+                className="rounded bg-black px-4 py-2 text-white"
+            >
+               Add 
+            </button>
+           </div>
          </form>
        </div> 
-    )
+    );
 }
