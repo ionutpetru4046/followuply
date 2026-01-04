@@ -13,6 +13,12 @@ export default function SmartRemindersPanel({ reminders }: Props) {
     );
   }
 
+  function formatDateTime(iso: string) {
+    const date = new Date(iso);
+
+    return date.toISOString().replace("T", " ").slice(0, 16);
+  }
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'overdue':
@@ -44,7 +50,7 @@ export default function SmartRemindersPanel({ reminders }: Props) {
               <td className="px-4 py-3 font-medium">{reminder.clientName}</td>
               <td className="px-4 py-3">{reminder.type}</td>
               <td className={`px-4 py-3 ${getStatusColor(reminder.status)}`}>
-                {new Date(reminder.dateTime).toLocaleString()}
+                {formatDateTime(reminder.dateTime)}
               </td>
               <td className="px-4 py-3">{reminder.message}</td>
               <td className="px-4 py-3 space-x-2">

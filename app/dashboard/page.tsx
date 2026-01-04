@@ -9,6 +9,34 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Client } from "@/lib/types";
 import AddClientModal from "./components/AddClientModal";
+import SmartRemindersPanel from "./reminders/SmartReminderPanel";
+
+const reminderData = [
+  {
+    id: "1",
+    clientName: "John Jhonny",
+    type: "Whats App",
+    dateTime: "2026-01-05T10:00:00Z",
+    message: "Follow-up on proposal",
+    status: "upcoming",
+  },
+  {
+    id: "2",
+    clientName: "John Smith",
+    type: "Email",
+    dateTime: "2026-01-01T09:00:00Z",
+    message: "Check-in Reminder",
+    status: "overdue",
+  },
+  {
+    id: "3",
+    clientName: "Alice Brown",
+    type: "WhatsApp",
+    dateTime: "2026-01-02T14:00:00Z",
+    message: "Schedule Call",
+    sttaus: "done",
+  },
+];
 
 const fakeRecentActivity = [
   {
@@ -269,6 +297,11 @@ export default function DashboardPage() {
             />
           )}
         </div>
+
+        <div className="p-6">
+      <h2 className="text-xl font-semibold mb-4">Smart Reminders</h2>
+      <SmartRemindersPanel reminders={reminderData} />
+    </div>
 
         {/* Quick Highlights */}
         <div className="flex flex-wrap gap-4 mb-10">
