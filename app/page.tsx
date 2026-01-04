@@ -5,7 +5,7 @@ import FeatureCard from "./components/FeatureCard";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Testimonial from "./components/Testimonial";
-import Faq from "./components/Faq"
+import Faq from "./components/Faq";
 
 export default function HomePage() {
   return (
@@ -15,29 +15,40 @@ export default function HomePage() {
       <div id="hero" className="w-full overflow-x-hidden">
         <main className="bg-gray-50 text-gray-900">
           {/* Hero */}
-          <section className="relative flex items-center justify-center w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 px-4 sm:px-8" style={{ minHeight: "100vh" }}>
+          <section
+            className="relative flex items-center justify-center w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 px-4 sm:px-8"
+            style={{ minHeight: "100vh" }}
+          >
             {/* Background Accent Blobs */}
             <div className="pointer-events-none absolute -top-32 left-[-32px] w-[320px] h-[320px] md:w-[480px] md:h-[480px] max-w-screen-sm max-h-[90vw] rounded-full bg-indigo-400 opacity-10 blur-3xl z-0" />
             <div className="pointer-events-none absolute bottom-0 right-[-32px] w-[180px] h-[180px] md:w-[340px] md:h-[340px] max-w-screen-xs max-h-[60vw] rounded-full bg-pink-400 opacity-10 blur-3xl z-0" />
-            
+
             <div className="relative z-20 flex flex-col items-center text-center max-w-3xl mx-auto">
               <span className="inline-flex items-center gap-2 px-4 py-1 bg-white/10 text-indigo-300 rounded-full text-xs font-medium mb-6 shadow">
                 🚀 Smarter client management • Modern CRM
               </span>
               <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight text-white drop-shadow-md">
-                More Clients.<br className="hidden sm:inline" />
+                More Clients.
+                <br className="hidden sm:inline" />
                 Less Work.
               </h1>
               <p className="mt-6 text-base xs:text-lg sm:text-xl text-gray-200 font-light max-w-xl mx-auto">
-                FollowUply remembers every client for you — and tells you exactly who needs a follow-up today, so you never lose repeat business again.<br/>
+                FollowUply remembers every client for you — and tells you
+                exactly who needs a follow-up today, so you never lose repeat
+                business again.
+                <br />
                 <span className="inline-block mt-4 border-l-4 border-indigo-400 pl-4 text-xs md:text-base text-indigo-200">
-                  Designed for solopreneurs, small business owners, and anyone who cares about their clients.
+                  Designed for solopreneurs, small business owners, and anyone
+                  who cares about their clients.
                 </span>
                 <br />
                 <span className="mt-4 block text-xs md:text-base text-indigo-100">
-                  With our streamlined dashboard and smart automations, tracking conversations and capturing every opportunity has never been easier.
-                  Stay focused on relationships, not on juggling apps or sticky notes. <br />
-                  Trusted by professionals in beauty, coaching, consulting, personal fitness, retail, and beyond.
+                  With our streamlined dashboard and smart automations, tracking
+                  conversations and capturing every opportunity has never been
+                  easier. Stay focused on relationships, not on juggling apps or
+                  sticky notes. <br />
+                  Trusted by professionals in beauty, coaching, consulting,
+                  personal fitness, retail, and beyond.
                 </span>
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
@@ -55,20 +66,52 @@ export default function HomePage() {
                 </a>
               </div>
               <p className="mt-5 text-xs sm:text-sm text-gray-300 flex items-center justify-center gap-2">
-                <svg className="w-4 h-4 text-green-400 inline-block" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                <svg
+                  className="w-4 h-4 text-green-400 inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
                 No credit card required • Cancel anytime • Trusted worldwide
               </p>
               {/* Extra modern UI element: Trust bar or customer logos (demo) */}
               <div className="mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 opacity-80">
                 <span className="text-xs text-gray-300/70">Trusted by</span>
-                <img src="/customers/customer1.svg" alt="Customer 1" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
-                <img src="/customers/customer2.svg" alt="Customer 2" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
-                <img src="/customers/customer3.svg" alt="Customer 3" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
-                <img src="/customers/customer4.svg" alt="Customer 4" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
-                <img src="/customers/customer5.svg" alt="Customer 5" className="w-16 sm:w-20 h-6 grayscale opacity-60" />
-                <span className="text-xs text-gray-300/70 hidden sm:inline">and more...</span>
+                <img
+                  src="/customers/customer1.svg"
+                  alt="Customer 1"
+                  className="w-16 sm:w-20 h-6 grayscale opacity-60"
+                />
+                <img
+                  src="/customers/customer2.svg"
+                  alt="Customer 2"
+                  className="w-16 sm:w-20 h-6 grayscale opacity-60"
+                />
+                <img
+                  src="/customers/customer3.svg"
+                  alt="Customer 3"
+                  className="w-16 sm:w-20 h-6 grayscale opacity-60"
+                />
+                <img
+                  src="/customers/customer4.svg"
+                  alt="Customer 4"
+                  className="w-16 sm:w-20 h-6 grayscale opacity-60"
+                />
+                <img
+                  src="/customers/customer5.svg"
+                  alt="Customer 5"
+                  className="w-16 sm:w-20 h-6 grayscale opacity-60"
+                />
+                <span className="text-xs text-gray-300/70 hidden sm:inline">
+                  and more...
+                </span>
               </div>
               {/* New: Quick video demo or animation */}
               <div className="mt-12 w-full flex flex-col items-center">
@@ -84,16 +127,23 @@ export default function HomePage() {
                   <source src="/followuply-demo.mp4" type="video/mp4" />
                   Demo video unavailable
                 </video>
-                <span className="text-indigo-100 text-xs mt-3">See how it works in 30 seconds. 
+                <span className="text-indigo-100 text-xs mt-3">
+                  See how it works in 30 seconds.
                   <br />
-                  <span className="text-gray-300">Our platform helps you close more business and build lasting relationships, with minimal effort.</span>
+                  <span className="text-gray-300">
+                    Our platform helps you close more business and build lasting
+                    relationships, with minimal effort.
+                  </span>
                 </span>
               </div>
             </div>
           </section>
 
           {/* Problem */}
-          <section className="relative px-2 xs:px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950" style={{ minHeight: "100vh" }}>
+          <section
+            className="relative px-2 xs:px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950"
+            style={{ minHeight: "100vh" }}
+          >
             {/* Accent Blobs */}
             <div className="pointer-events-none absolute -top-16 md:-top-24 right-[-32px] md:right-[-32px] w-[180px] h-[180px] md:w-[340px] md:h-[340px] max-w-screen-xs max-h-[60vw] rounded-full bg-indigo-400 opacity-10 blur-3xl z-0"></div>
             <div className="pointer-events-none absolute left-[-32px] bottom-0 w-[120px] h-[120px] md:w-[220px] md:h-[220px] max-w-screen-xs max-h-[40vw] rounded-full bg-pink-400 opacity-10 blur-3xl z-0"></div>
@@ -102,43 +152,76 @@ export default function HomePage() {
                 Problems Every Solopreneur Faces
               </h2>
               <p className="mt-5 text-base sm:text-lg text-gray-200 mb-6">
-                Inconsistent follow-ups cost you repeat business. Spreadsheets and sticky notes just can&apos;t keep up.
+                Inconsistent follow-ups cost you repeat business. Spreadsheets
+                and sticky notes just can&apos;t keep up.
                 <br />
-                As your business grows, so does the challenge. Clients expect personal attention, but juggling appointments and remembering names becomes impossible without help.
+                As your business grows, so does the challenge. Clients expect
+                personal attention, but juggling appointments and remembering
+                names becomes impossible without help.
                 <br />
-                Even the most dedicated pros can lose track and let high-value clients slip through the cracks.
+                Even the most dedicated pros can lose track and let high-value
+                clients slip through the cracks.
               </p>
               {/* Modern Problem Grid */}
               <div className="mt-8 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
                 <div className="bg-gray-800 rounded-xl p-6 shadow text-gray-50">
-                  <span role="img" aria-label="lost">😵‍💫</span>
+                  <span role="img" aria-label="lost">
+                    😵‍💫
+                  </span>
                   <div className="font-semibold mt-3">Clients Go Cold</div>
-                  <div className="text-xs mt-1">Forget to check in on time? Opportunities vanish. <br />Big deals are lost when you don&apos;t follow up at just the right moment.</div>
+                  <div className="text-xs mt-1">
+                    Forget to check in on time? Opportunities vanish. <br />
+                    Big deals are lost when you don&apos;t follow up at just the
+                    right moment.
+                  </div>
                 </div>
                 <div className="bg-gray-800 rounded-xl p-6 shadow text-gray-50">
-                  <span role="img" aria-label="messy">📋</span>
+                  <span role="img" aria-label="messy">
+                    📋
+                  </span>
                   <div className="font-semibold mt-3">Messy Trackers</div>
-                  <div className="text-xs mt-1">Sticky notes and spreadsheets let things slip through the cracks.<br />Important conversations wander across chat apps, notebooks, and sticky tabs.</div>
+                  <div className="text-xs mt-1">
+                    Sticky notes and spreadsheets let things slip through the
+                    cracks.
+                    <br />
+                    Important conversations wander across chat apps, notebooks,
+                    and sticky tabs.
+                  </div>
                 </div>
                 <div className="bg-gray-800 rounded-xl p-6 shadow text-gray-50">
-                  <span role="img" aria-label="no time">⏰</span>
+                  <span role="img" aria-label="no time">
+                    ⏰
+                  </span>
                   <div className="font-semibold mt-3">No Time</div>
-                  <div className="text-xs mt-1">Your day’s busy enough! CRM should help, not get in the way.<br />Manual systems steal valuable work hours and create stress instead of peace of mind.</div>
+                  <div className="text-xs mt-1">
+                    Your day’s busy enough! CRM should help, not get in the way.
+                    <br />
+                    Manual systems steal valuable work hours and create stress
+                    instead of peace of mind.
+                  </div>
                 </div>
               </div>
               <div className="mt-10 w-full max-w-xl text-left text-gray-300 text-xs sm:text-sm mx-auto">
                 <ul className="list-disc pl-4">
                   <li>Missed upsell chances and lost referrals</li>
                   <li>Stress and anxiety about client churn</li>
-                  <li>Admin work stealing your focus from growth & relationships</li>
+                  <li>
+                    Admin work stealing your focus from growth & relationships
+                  </li>
                 </ul>
-                <div className="mt-4 italic">If this sounds like you — you&apos;re not alone. But there&apos;s a better way.</div>
+                <div className="mt-4 italic">
+                  If this sounds like you — you&apos;re not alone. But
+                  there&apos;s a better way.
+                </div>
               </div>
             </div>
           </section>
 
           {/* How FollowUply Works */}
-          <section className="relative bg-gradient-to-br from-indigo-800 via-indigo-700 to-indigo-900 w-full py-10 sm:py-24 flex items-center" style={{ minHeight: "100vh" }}>
+          <section
+            className="relative bg-gradient-to-br from-indigo-800 via-indigo-700 to-indigo-900 w-full py-10 sm:py-24 flex items-center"
+            style={{ minHeight: "100vh" }}
+          >
             {/* Animated floating shapes */}
             <div className="absolute inset-0 pointer-events-none z-0">
               <div className="absolute left-1/2 top-0 w-52 sm:w-96 h-52 sm:h-96 opacity-20 blur-3xl bg-pink-500/50 rounded-full -translate-x-2/3 -translate-y-20 animate-pulse max-w-screen-md max-h-[90vw]"></div>
@@ -149,69 +232,123 @@ export default function HomePage() {
                 How FollowUply Works
               </h2>
               <p className="mt-5 text-base sm:text-lg text-indigo-100 mb-8">
-                Stay on top of every client and never miss a repeat opportunity.<br />
-                Our process is built for simplicity and efficiency. Designed for real people—no technical jargon, just results.
+                Stay on top of every client and never miss a repeat opportunity.
+                <br />
+                Our process is built for simplicity and efficiency. Designed for
+                real people—no technical jargon, just results.
               </p>
               {/* Steps grid */}
               <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10 w-full">
                 <div className="bg-indigo-900/80 rounded-xl p-6 text-white shadow">
                   <div className="font-bold text-lg mb-2">1. Add Clients</div>
                   <div className="text-xs">
-                    Name, contact info, simple setup. No mess.<br />
-                    Bulk-import from your contacts or spreadsheets, and organize by tags, priority, and notes in seconds.
+                    Name, contact info, simple setup. No mess.
+                    <br />
+                    Bulk-import from your contacts or spreadsheets, and organize
+                    by tags, priority, and notes in seconds.
                   </div>
                 </div>
                 <div className="bg-indigo-900/80 rounded-xl p-6 text-white shadow">
                   <div className="font-bold text-lg mb-2">2. Get Reminders</div>
                   <div className="text-xs">
-                    Automatic, smart reminders for who needs a reach-out today.<br />
-                    Set custom schedules or let the system auto-prioritize your queue based on engagement and history. Notifications come via email, app, or SMS!
+                    Automatic, smart reminders for who needs a reach-out today.
+                    <br />
+                    Set custom schedules or let the system auto-prioritize your
+                    queue based on engagement and history. Notifications come
+                    via email, app, or SMS!
                   </div>
                 </div>
                 <div className="bg-indigo-900/80 rounded-xl p-6 text-white shadow">
                   <div className="font-bold text-lg mb-2">3. Grow Business</div>
                   <div className="text-xs">
-                    Consistent clients, more referrals, no anxiety.<br />
-                    Review follow-up history at a glance, track client satisfaction, and watch your referrals grow — while spending less time on admin.
+                    Consistent clients, more referrals, no anxiety.
+                    <br />
+                    Review follow-up history at a glance, track client
+                    satisfaction, and watch your referrals grow — while spending
+                    less time on admin.
                   </div>
                 </div>
               </div>
               <div className="mt-10 text-indigo-100 text-base max-w-2xl mx-auto text-center hidden sm:block">
-                <strong>Bonus:</strong> Integrate with your calendar, sync reminders to your phone, and get subtle nudges so no one ever slips through the cracks.
+                <strong>Bonus:</strong> Integrate with your calendar, sync
+                reminders to your phone, and get subtle nudges so no one ever
+                slips through the cracks.
               </div>
             </div>
           </section>
 
           {/* Benefits */}
-          <section className="flex items-center px-4 sm:px-6 bg-white" style={{ minHeight: "100vh" }}>
+          <section
+            className="flex items-center px-4 sm:px-6 bg-white"
+            style={{ minHeight: "100vh" }}
+          >
             <div className="max-w-4xl mx-auto text-center py-10 sm:py-20 w-full">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
                 Why You&apos;ll Love FollowUply
               </h2>
               <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-7 text-left">
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
-                  <span className="font-semibold text-indigo-700">Never lose clients</span>
-                  <p className="text-gray-600 text-sm mt-1">Stay top-of-mind automatically — for better retention and more repeat income. <br />Win more referrals and renewals by providing truly personal customer care, every time, even with a busy schedule.</p>
+                  <span className="font-semibold text-indigo-700">
+                    Never lose clients
+                  </span>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Stay top-of-mind automatically — for better retention and
+                    more repeat income. <br />
+                    Win more referrals and renewals by providing truly personal
+                    customer care, every time, even with a busy schedule.
+                  </p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
-                  <span className="font-semibold text-indigo-700">Easy, zero-learning curve</span>
-                  <p className="text-gray-600 text-sm mt-1">Built for busy solo operators: no complicated forms or setup.<br />Intuitive drag-and-drop interface, straight to the point, with helpful tips along the way.</p>
+                  <span className="font-semibold text-indigo-700">
+                    Easy, zero-learning curve
+                  </span>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Built for busy solo operators: no complicated forms or
+                    setup.
+                    <br />
+                    Intuitive drag-and-drop interface, straight to the point,
+                    with helpful tips along the way.
+                  </p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
-                  <span className="font-semibold text-indigo-700">Secure &amp; private</span>
-                  <p className="text-gray-600 text-sm mt-1">Your data is encrypted, and only you can see it.<br />SOC2-ready, GDPR-compliant, and privacy-first. Backups and secure cloud hosting give you peace of mind.</p>
+                  <span className="font-semibold text-indigo-700">
+                    Secure &amp; private
+                  </span>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Your data is encrypted, and only you can see it.
+                    <br />
+                    SOC2-ready, GDPR-compliant, and privacy-first. Backups and
+                    secure cloud hosting give you peace of mind.
+                  </p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50">
-                  <span className="font-semibold text-indigo-700">Cancel anytime</span>
-                  <p className="text-gray-600 text-sm mt-1">No contracts, no hassle. Change plans whenever you want.<br />Try risk-free. Upgrade, downgrade, pause, or export your data at any time.</p>
+                  <span className="font-semibold text-indigo-700">
+                    Cancel anytime
+                  </span>
+                  <p className="text-gray-600 text-sm mt-1">
+                    No contracts, no hassle. Change plans whenever you want.
+                    <br />
+                    Try risk-free. Upgrade, downgrade, pause, or export your
+                    data at any time.
+                  </p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50 hidden sm:block">
-                  <span className="font-semibold text-indigo-700">Actionable Analytics</span>
-                  <p className="text-gray-600 text-sm mt-1">See your engagement rates, overdue clients, and most valuable contacts at a glance with simple charts and stats.</p>
+                  <span className="font-semibold text-indigo-700">
+                    Actionable Analytics
+                  </span>
+                  <p className="text-gray-600 text-sm mt-1">
+                    See your engagement rates, overdue clients, and most
+                    valuable contacts at a glance with simple charts and stats.
+                  </p>
                 </li>
                 <li className="bg-gray-50 rounded-xl px-6 py-4 shadow border border-indigo-50 hidden sm:block">
-                  <span className="font-semibold text-indigo-700">Support that Cares</span>
-                  <p className="text-gray-600 text-sm mt-1">Our support team is run by real people—solopreneurs and small business owners just like you.</p>
+                  <span className="font-semibold text-indigo-700">
+                    Support that Cares
+                  </span>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Our support team is run by real people—solopreneurs and
+                    small business owners just like you.
+                  </p>
                 </li>
               </ul>
               <div className="mt-10 w-full">
@@ -221,46 +358,73 @@ export default function HomePage() {
           </section>
 
           {/* Who it’s for */}
-          <section className="flex items-center justify-center bg-gradient-to-r from-indigo-50 via-white to-sky-100 px-4 sm:px-6 py-0 relative" style={{ minHeight: "100vh" }}>
+          <section
+            className="flex items-center justify-center bg-gradient-to-r from-indigo-50 via-white to-sky-100 px-4 sm:px-6 py-0 relative"
+            style={{ minHeight: "100vh" }}
+          >
             <div className="max-w-4xl w-full mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-10 md:gap-12 py-12 md:py-24">
               <div className="flex-1 bg-white rounded-2xl shadow p-8 text-center">
                 <div className="text-2xl mb-4">👩‍🎨</div>
-                <div className="font-bold text-lg mb-2">Freelancers &amp; Creatives</div>
-                <div className="text-gray-700 text-sm">Keep your project clients coming back, even months after the last gig.
-                  <br/>Artists, designers, consultants—track every outreach, build relationships, and see more repeat commissions.
+                <div className="font-bold text-lg mb-2">
+                  Freelancers &amp; Creatives
+                </div>
+                <div className="text-gray-700 text-sm">
+                  Keep your project clients coming back, even months after the
+                  last gig.
+                  <br />
+                  Artists, designers, consultants—track every outreach, build
+                  relationships, and see more repeat commissions.
                 </div>
               </div>
               <div className="flex-1 bg-white rounded-2xl shadow p-8 text-center">
                 <div className="text-2xl mb-4">🧑‍🔬</div>
-                <div className="font-bold text-lg mb-2">Health &amp; Wellness pros</div>
-                <div className="text-gray-700 text-sm">Trainers, therapists, coaches, and more: build loyalty with automated reminders.
-                  <br/>Book more sessions, follow up after appointments, and show every client you care personally.</div>
+                <div className="font-bold text-lg mb-2">
+                  Health &amp; Wellness pros
+                </div>
+                <div className="text-gray-700 text-sm">
+                  Trainers, therapists, coaches, and more: build loyalty with
+                  automated reminders.
+                  <br />
+                  Book more sessions, follow up after appointments, and show
+                  every client you care personally.
+                </div>
               </div>
               <div className="flex-1 bg-white rounded-2xl shadow p-8 text-center">
                 <div className="text-2xl mb-4">🏪</div>
                 <div className="font-bold text-lg mb-2">Small Shop Owners</div>
-                <div className="text-gray-700 text-sm">Turn one-time visitors into loyal regulars with easy, timely check-ins.
-                  <br/>Coffee shops, boutiques, local services—FollowUply helps you reach out before clients forget you.</div>
+                <div className="text-gray-700 text-sm">
+                  Turn one-time visitors into loyal regulars with easy, timely
+                  check-ins.
+                  <br />
+                  Coffee shops, boutiques, local services—FollowUply helps you
+                  reach out before clients forget you.
+                </div>
               </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full flex justify-center">
               <div className="text-center text-gray-500 text-xs py-3">
                 <span className="inline-block bg-indigo-100 px-4 py-2 rounded-full m-2">
-                  Also perfect for realtors, tutors, field agents, pet care professionals, coaches, consultants, stylists, and more!
+                  Also perfect for realtors, tutors, field agents, pet care
+                  professionals, coaches, consultants, stylists, and more!
                 </span>
               </div>
             </div>
           </section>
 
           {/* Final CTA */}
-          <section className="flex flex-col items-center justify-center bg-gradient-to-tr from-black via-gray-900 to-indigo-900 relative px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
+          <section
+            className="flex flex-col items-center justify-center bg-gradient-to-tr from-black via-gray-900 to-indigo-900 relative px-4 sm:px-6 py-0"
+            style={{ minHeight: "100vh" }}
+          >
             <div className="max-w-3xl w-full mx-auto text-center py-12 sm:py-24 relative z-20">
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
                 Start Growing Your Repeat Business Now
               </h2>
               <p className="mt-5 text-lg text-gray-200">
-                Try FollowUply free for 7 days with no credit card required.<br />
-                Experience the difference for yourself. Join hundreds who&apos;ve made client outreach a breeze.
+                Try FollowUply free for 7 days with no credit card required.
+                <br />
+                Experience the difference for yourself. Join hundreds
+                who&apos;ve made client outreach a breeze.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                 <a
@@ -277,16 +441,23 @@ export default function HomePage() {
                 </a>
               </div>
               <div className="mt-10 text-gray-300 text-xs max-w-lg mx-auto">
-                Cancel any time, keep your data, and get real help if you need it.
+                Cancel any time, keep your data, and get real help if you need
+                it.
                 <br />
-                <span className="text-indigo-200">Fast track your growth — FollowUply is your unfair advantage!</span>
+                <span className="text-indigo-200">
+                  Fast track your growth — FollowUply is your unfair advantage!
+                </span>
               </div>
             </div>
             <div className="pointer-events-none absolute bottom-0 left-0 w-full h-20 sm:h-40 bg-gradient-to-t from-black to-transparent z-0" />
           </section>
 
           {/* Features Section */}
-          <section id="features" className="flex items-center justify-center bg-gradient-to-r from-gray-50 via-indigo-50 to-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
+          <section
+            id="features"
+            className="flex items-center justify-center bg-gradient-to-r from-gray-50 via-indigo-50 to-white px-4 sm:px-6 py-0"
+            style={{ minHeight: "100vh" }}
+          >
             <div className="max-w-6xl w-full mx-auto text-center py-12 sm:py-24">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 Powerful Features, Simple to Use
@@ -323,101 +494,167 @@ export default function HomePage() {
           </section>
 
           {/* Pricing Section */}
-          <section id="pricing" className="flex items-center justify-center bg-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
-            <div className="max-w-6xl w-full mx-auto text-center py-12 sm:py-24">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Simple, Honest Pricing
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-gray-50 p-8 rounded-xl border shadow text-center">
-                  <div className="text-lg font-bold text-indigo-600 mb-2">Starter</div>
-                  <div className="text-4xl font-extrabold mb-2">Free</div>
-                  <div className="text-gray-600 mb-6">
-                    Up to 15 clients<br />
-                    Basic CRM features<br />
-                    No card required<br />
-                    Email support<br />
-                    Unlimited notes & tags<br />
-                  </div>
-                  <a href="/login" className="block w-full px-6 py-2 rounded bg-indigo-600 text-white font-semibold mt-2 hover:bg-indigo-700 transition">
-                    Start Free
-                  </a>
-                  <div className="mt-3 text-xs text-gray-400">Great for testing the core features and getting started risk-free.</div>
+          <section id="pricing" className="mx-auto max-w-5xl px-6 py-20">
+            {/* Header */}
+            <div className="mb-16 text-center">
+              <h1 className="text-4xl font-bold tracking-tight">
+                Simple pricing for serious follow-ups
+              </h1>
+              <p className="mt-4 text-gray-600">
+                Stop losing clients because you forgot to follow up.
+              </p>
+            </div>
+
+            {/* Pricing Cards */}
+            <div className="grid gap-8 md:grid-cols-2">
+              {/* Free Plan */}
+              <div className="rounded-2xl border p-8">
+                <h2 className="text-xl font-semibold">Starter</h2>
+                <p className="mt-2 text-gray-600">
+                  For getting started with client follow-ups.
+                </p>
+
+                <div className="mt-6">
+                  <span className="text-4xl font-bold">€0</span>
+                  <span className="text-gray-600"> / month</span>
                 </div>
-                <div className="bg-indigo-50 p-8 rounded-xl border-2 border-indigo-600 shadow-xl text-center">
-                  <div className="text-lg font-bold text-indigo-700 mb-2">Pro</div>
-                  <div className="text-4xl font-extrabold mb-2">$9<span className="text-2xl font-medium">/mo</span></div>
-                  <div className="text-gray-700 mb-6">
-                    Unlimited clients<br />
-                    All CRM features<br />
-                    Priority support<br />
-                    Advanced reminders & automations<br />
-                    Analytics & reports<br />
-                    Dedicated onboarding call<br />
-                  </div>
-                  <a href="/login" className="block w-full px-6 py-2 rounded bg-indigo-700 text-white font-semibold mt-2 hover:bg-indigo-800 transition">
-                    Start 7-day Free Trial
-                  </a>
-                  <div className="mt-3 text-xs text-indigo-600">Best value: For pros ready to scale relationships and retention.</div>
-                </div>
-                <div className="bg-gray-50 p-8 rounded-xl border shadow text-center">
-                  <div className="text-lg font-bold text-indigo-600 mb-2">Team</div>
-                  <div className="text-4xl font-extrabold mb-2">$19<span className="text-2xl font-medium">/mo</span></div>
-                  <div className="text-gray-600 mb-6">
-                    Share clients with team<br />
-                    All Pro features<br />
-                    Team reminders<br />
-                    User roles & permissions<br />
-                    Dedicated account manager<br />
-                  </div>
-                  <a href="/login" className="block w-full px-6 py-2 rounded bg-indigo-600 text-white font-semibold mt-2 hover:bg-indigo-700 transition">
-                    Contact Sales
-                  </a>
-                  <div className="mt-3 text-xs text-gray-400">Perfect for agencies & small teams. <br />Custom onboarding available.</div>
-                </div>
+
+                <ul className="mt-8 space-y-3 text-sm">
+                  <li>✅ Up to 5 clients</li>
+                  <li>✅ Manual follow-up dates</li>
+                  <li>✅ Basic dashboard</li>
+                  <li className="text-gray-400">❌ Follow-up reminders</li>
+                  <li className="text-gray-400">❌ Overdue alerts</li>
+                </ul>
+
+                <a
+                  href="/login"
+                  className="mt-10 w-full inline-block rounded-lg border px-4 py-3 font-medium text-center hover:bg-gray-500 transition"
+                >
+                  Get started for free
+                </a>
               </div>
-              <div className="mt-8 text-sm text-gray-500">
-                <div>No hidden fees. All plans include secure cloud backup and unlimited device access.</div>
-                <div className="mt-2">
-                  <a href="#faq" className="text-indigo-700 underline">See pricing FAQ below</a>
+
+              {/* Pro Plan */}
+              <div className="relative rounded-2xl border-2 border-black p-8">
+                {/* Badge */}
+                <span className="absolute -top-3 right-6 rounded-full bg-black px-3 py-1 text-xs font-medium text-white">
+                  Most Popular
+                </span>
+
+                <h2 className="text-xl font-semibold">Professional</h2>
+                <p className="mt-2 text-gray-600">
+                  For freelancers who don’t want to lose clients.
+                </p>
+
+                <div className="mt-6">
+                  <span className="text-4xl font-bold">€9</span>
+                  <span className="text-gray-600"> / month</span>
                 </div>
+
+                <p className="mt-2 text-sm text-gray-500">
+                  €90 billed yearly (2 months free)
+                </p>
+
+                <ul className="mt-8 space-y-3 text-sm">
+                  <li>✅ Unlimited clients</li>
+                  <li>✅ Follow-up reminders</li>
+                  <li>✅ Overdue follow-up alerts</li>
+                  <li>✅ Client status tracking</li>
+                  <li>✅ Priority updates</li>
+                </ul>
+
+                <a
+                  href="/login"
+                  className="mt-10 w-full inline-block rounded-lg bg-black px-4 py-3 font-medium text-white text-center hover:bg-gray-800 transition"
+                >
+                  Upgrade to Pro
+                </a>
               </div>
             </div>
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="flex pt-24 pb-24 items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-4 sm:px-6 py-0" style={{ minHeight: "100vh" }}>
+          <section
+            id="contact"
+            className="flex pt-24 pb-24 items-center justify-center bg-gradient-to-r from-sky-50 via-indigo-50 to-white px-4 sm:px-6 py-0"
+            style={{ minHeight: "100vh" }}
+          >
             <div className="max-w-3xl w-full mx-auto text-center py-12 sm:py-24 rounded-3xl shadow-lg bg-white/80 backdrop-blur">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 Contact Us
               </h2>
               <p className="mb-6 text-gray-700">
-                Got a question, request, or suggestion? Our team always loves hearing from you.<br />
-                We reply within 24 hours during business days.<br />
-                Interested in a partnership, demo, or joining our beta program? Let us know!
+                Got a question, request, or suggestion? Our team always loves
+                hearing from you.
+                <br />
+                We reply within 24 hours during business days.
+                <br />
+                Interested in a partnership, demo, or joining our beta program?
+                Let us know!
               </p>
               <form className="grid gap-5 max-w-lg mx-auto">
-                <input type="text" placeholder="Your Name" className="rounded px-4 py-2 border border-indigo-200 bg-white" required />
-                <input type="email" placeholder="Email" className="rounded px-4 py-2 border border-indigo-200 bg-white" required />
-                <input type="text" placeholder="Phone (optional)" className="rounded px-4 py-2 border border-indigo-200 bg-white" />
-                <textarea placeholder="Your Message" className="rounded px-4 py-2 border border-indigo-200 bg-white" rows={4} required />
-                <button type="submit" className="rounded px-6 py-2 bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="rounded px-4 py-2 border border-indigo-200 bg-white"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="rounded px-4 py-2 border border-indigo-200 bg-white"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Phone (optional)"
+                  className="rounded px-4 py-2 border border-indigo-200 bg-white"
+                />
+                <textarea
+                  placeholder="Your Message"
+                  className="rounded px-4 py-2 border border-indigo-200 bg-white"
+                  rows={4}
+                  required
+                />
+                <button
+                  type="submit"
+                  className="rounded px-6 py-2 bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition"
+                >
                   Send
                 </button>
               </form>
-              <div className="mt-6">
-              </div>
+              <div className="mt-6"></div>
               <div className="mt-8 text-gray-600 text-xs">
-                Or email us directly: <a href="mailto:hello@followuply.com" className="text-indigo-700 underline">hello@followuply.com</a>
+                Or email us directly:{" "}
+                <a
+                  href="mailto:hello@followuply.com"
+                  className="text-indigo-700 underline"
+                >
+                  hello@followuply.com
+                </a>
                 <br />
-                Follow us on <a href="https://twitter.com/followuply" className="text-indigo-700 underline">Twitter</a> &bull; <a href="https://facebook.com/followuply" className="text-indigo-700 underline">Facebook</a>
+                Follow us on{" "}
+                <a
+                  href="https://twitter.com/followuply"
+                  className="text-indigo-700 underline"
+                >
+                  Twitter
+                </a>{" "}
+                &bull;{" "}
+                <a
+                  href="https://facebook.com/followuply"
+                  className="text-indigo-700 underline"
+                >
+                  Facebook
+                </a>
               </div>
-             </div>
-            </section>
-           </main>
-          </div>
-         <Faq />
-        <Footer />
+            </div>
+          </section>
+        </main>
+      </div>
+      <Faq />
+      <Footer />
     </>
   );
 }
